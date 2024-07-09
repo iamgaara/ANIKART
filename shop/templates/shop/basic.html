@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      .navbar-dark .navbar-nav .nav-link {
+        color: #ffffff;
+      }
+      .navbar-dark .navbar-brand {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .navbar-dark .navbar-brand:hover {
+        color: #cccccc;
+      }
+      .navbar.bg-dark {
+        background-color: #000000 !important;
+        height: 80px;
+      }
+      
+      .navbar .navbar-brand,
+      .navbar .nav-link {
+        color: #ffffff !important;
+      }
+
+      .top-bar {
+        background-color: #ffffff;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .content {
+        flex: 1;
+      }
+
+      .footer {
+        background-color: black;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+      .footer .footer-text {
+        margin-top: 5px;
+        font-size: 10px;
+      }
+
+      .yellow-bg {
+        background-color: yellow;
+        color: black; /* Text color within the yellow background */
+      }
+    
+      .btn-dark {
+        background-color: black;
+        color: white; /* Text color for the "Sign Up" button */
+        border-color: black; /* Border color if needed */
+      }
+    
+      .classic-font {
+        font-family: 'Georgia', serif;
+        font-weight: bold;
+      }
+    
+      .text-uppercase {
+        text-transform: uppercase;
+      }
+    
+      .gl-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000; /* Black background */
+        color: #fff; /* White text */
+        border: none;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    
+      .gl-cta--primary {
+        background-color: #000; /* Black background */
+      }
+    
+      .gl-cta__content {
+        margin-right: 10px;
+      }
+    
+      .gl-icon__wrapper {
+        display: inline-flex;
+        align-items: center;
+      }
+    
+      .gl-icon {
+        fill: #fff; /* White icon */
+      }
+    
+      .extended-box {
+        padding: 30px 40px; /* Adjust padding to make the box longer */
+        width: 100%; /* Ensure it takes the full width of the column */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for enhancement */
+        border: 1px solid #000; /* Add a border to make it more prominent */
+        font-size: 1.2rem; /* Increase font size slightly */
+        background-color: #ffeb3b; /* Slightly adjust the background color for better aesthetics */
+      }
+
+      .dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+      .dark-mode .navbar.bg-dark {
+        background-color: #1c1c1c !important;
+      }
+      .dark-mode .footer {
+        background-color: #1c1c1c;
+      }
+
+      {% block css %}{% endblock %}
+    </style>
+  </head>
+  <body class="content-wrapper">
+    <div class="top-bar">
+      <span style="font-size: 24px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">ANI KART</span>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid"> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/shop">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/shop/about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/shop/tracker">Tracker</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/shop/contact">Contact Us</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <button type="button" class="btn btn-secondary mx-2" id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            Cart(<span id="cart">0</span>)
+          </button>
+          <button type="button" class="btn btn-outline-light" id="theme-toggle">Toggle Dark Mode</button>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      {% block body %}{% endblock %}
+    </div>
+    <footer class="footer mt-auto">
+      <div>
+        <a href="#">Privacy</a> |
+        <a href="#">Terms and Conditions</a> |
+        <a href="#">Cookies</a>
+      </div>
+      <div class="footer-text">
+        <br>
+        © 2024 ANI KART Pvt Ltd
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+     
+    
+
+    <script>
+      document.getElementById('theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+      });
+    </script>
+    {% block js %}{% endblock %}
+  </body>
+</html>

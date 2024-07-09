@@ -1,0 +1,140 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block css %}
+/* Custom CSS for About Us page */
+.about-section {
+    background-color: yellow;
+    color: black;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-section .btn-primary {
+    background-color: black;
+    border-color: black;
+}
+
+.about-section .btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+.mission-section {
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.mission-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.mission-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.mission-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.mission-section ul li {
+    margin-bottom: 10px;
+}
+
+.mission-section .btn-secondary {
+    background-color: yellow;
+    color: black;
+    border-color: yellow;
+}
+
+.mission-section .btn-secondary:hover {
+    background-color: #ffeb3b;
+    color: black;
+    border-color: #ffeb3b;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer:before {
+  content: "";
+  position: absolute;
+  top: -2px; /* Adjust as needed */
+  left: 0;
+  width: 100%;
+  height: 5px; /* Height of the yellow line */
+  background-color: yellow;
+}
+{% endblock %}
+
+{% block body %}
+
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="about-section">
+    <div class="container">
+      <h1 class="display-3">ANI KART</h1>
+      <p>Welcome to ANI KART, your ultimate destination for manga enthusiasts! Founded on July 7, 2024, by passionate manga lovers, ANI KART aims to bring you a diverse collection of manga from various genres, catering to every reader's taste.</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+    </div>
+  </div>
+
+  <div class="mission-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Our Mission</h2>
+          <p>At ANI KART, we are committed to:</p>
+          <ul>
+            <li><strong>Quality and Variety:</strong> Curating a wide range of manga titles across genres including action, adventure, romance, fantasy, and more.</li>
+            <li><strong>Customer Satisfaction:</strong> Providing exceptional service and ensuring your manga shopping experience is seamless and enjoyable.</li>
+            <li><strong>Community Engagement:</strong> Fostering a vibrant community of manga enthusiasts where you can connect, share, and explore your love for manga.</li>
+          </ul>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Why Choose ANI KART?</h2>
+          <p>Discover why ANI KART is your best choice:</p>
+          <ul>
+            <li><strong>Fresh Releases:</strong> Stay updated with the latest manga releases and classics that every manga aficionado cherishes.</li>
+            <li><strong>Secure Shopping:</strong> Shop with confidence knowing that your transactions are secure and your privacy is protected.</li>
+            <li><strong>Passionate Team:</strong> Our team consists of dedicated manga fans who are here to assist you in finding the perfect manga to read.</li>
+          </ul>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Meet Our Team</h2>
+          <div class="team-member">
+            <h3>Gaara</h3>
+            <p>Founder & CEO</p>
+            <p>It's just me!</p>
+          </div>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
