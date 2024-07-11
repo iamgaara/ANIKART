@@ -64,6 +64,7 @@ To build this website, I used the following resources:
 
 CodeWithHarry's Django Tutorial in Hindi: YouTube Playlist  https://www.youtube.com/playlist?list=PLu0W_9lII9ah7DDtYtflgwMwpT3xmjXY9
 W3Schools Django Tutorial: W3Schools    https://www.w3schools.com/django/
+
 ChatGPT
 
 
